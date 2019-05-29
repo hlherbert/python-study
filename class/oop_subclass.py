@@ -43,6 +43,7 @@ class Pig(SchoolMember):
     def tell(self):
         SchoolMember.tell(self)
 
+
 t = Teacher(name='Mrs. Shrividya', age=40, salary=3000)
 s = Student(name='Swaroop', age=25, marks=75)
 p = Pig(name='Mr. Pig', age=2)
