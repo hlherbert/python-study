@@ -18,3 +18,20 @@ print(variable.grad)
 print(variable)
 print(variable.data)
 print(variable.data.numpy())
+
+x=Variable(torch.ones(2,2), requires_grad=True)
+#x=Variable(torch.ones(2,2))
+print(x)
+vairable_np = x.data.numpy()
+
+y = x+2
+z = y*y*3
+print(y)
+print(y.grad_fn)
+print(z.grad_fn)
+print('z=',z)
+
+out = z.mean()
+print('out=',out)
+out.backward()
+print(x.grad)
